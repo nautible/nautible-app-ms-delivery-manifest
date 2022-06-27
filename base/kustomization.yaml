@@ -1,0 +1,3 @@
+resources:
+  - delivery-deploy.yaml
+  - delivery-service.yaml
