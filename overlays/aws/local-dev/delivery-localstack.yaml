@@ -33,6 +33,7 @@ spec:
           - containerPort: 4566
         env:
         - name: SERVICES
+          # value: dynamodb,sqs,sns
           value: dynamodb
         - name: START_WEB
           value: "0"
