@@ -28,13 +28,12 @@ spec:
     spec:
       containers:
       - name: delivery-localstack
-        image: localstack/localstack
+        image: localstack/localstack:0.14.4
         ports:
           - containerPort: 4566
         env:
         - name: SERVICES
-          # value: dynamodb,sqs,sns
-          value: dynamodb
+          value: dynamodb,sqs,sns,sts
         - name: START_WEB
           value: "0"
         lifecycle:

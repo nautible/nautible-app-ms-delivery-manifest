@@ -3,5 +3,4 @@ bases:
 patchesStrategicMerge:
   - delivery-deploy.yaml
 resources:
-  - ./delivery-localstack.yaml
-#  - ./delivery-dapr-pubsub.yaml
+  - delivery-dapr-pubsub.yaml
