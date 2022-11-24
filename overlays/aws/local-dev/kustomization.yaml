@@ -2,5 +2,5 @@ bases:
   - ../../../base
 patchesStrategicMerge:
   - delivery-deploy.yaml
-resources:
-  - delivery-dapr-pubsub.yaml
+# resources:
+#   - delivery-dapr-pubsub.yaml
