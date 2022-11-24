@@ -1,0 +1,4 @@
+resources:
+  - delivery-deploy.yaml
+  - delivery-service.yaml
+  - delivery-cronjob.yaml

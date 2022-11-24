@@ -1,0 +1,2 @@
+resources:
+  - delivery-localstack.yaml
