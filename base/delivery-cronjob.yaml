@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: delivery-cronjob
+  namespace: nautible-app-ms
+spec:
+  schedule: "*/2 * * * *" # 2分おき
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: delivery-cronjob
+            image: curlimages/curl
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - 'date; curl -v
+               -X "POST"
+               http://nautible-app-ms-delivery:8080/delivery/confirmShipping/'
+          restartPolicy: OnFailure

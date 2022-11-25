@@ -1,1 +1,2 @@
-# nautible-app-ms-delivery-manifest
+# nautible-app-ms-delivery-manifest project
+出荷サービスのマニフェストを管理するプロジェクト
