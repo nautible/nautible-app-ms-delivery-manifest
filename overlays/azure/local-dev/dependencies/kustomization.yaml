@@ -1,0 +1,3 @@
+resources:
+  - delivery-mongo.yaml
+  - delivery-redis.yaml

@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-ms-delivery
+  namespace: nautible-app-ms
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: nautible-app-ms-delivery
+        image: nautibledevacr.azurecr.io/nautible-app-ms-delivery:latest
+        env:
+        - name: QUARKUS_PROFILE
+          value: azure-local-dev
+        # - name: JAVA_VERSION
+        #   value: "11"
