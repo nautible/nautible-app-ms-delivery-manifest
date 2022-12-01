@@ -5,8 +5,13 @@ metadata:
   namespace: nautible-app-ms
 spec:
   schedule: "*/2 * * * *" # 2分おき
+  concurrencyPolicy: Forbid # 多重起動禁止
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
   jobTemplate:
     spec:
+      backoffLimit: 0 # リトライなし
+      ttlSecondsAfterFinished: 30 # 終了後のPodを削除
       template:
         spec:
           containers:
@@ -19,4 +24,4 @@ spec:
             - 'date; curl -v
                -X "POST"
                http://nautible-app-ms-delivery:8080/delivery/confirmShipping/'
-          restartPolicy: OnFailure
+          restartPolicy: Never
