@@ -1,17 +1,17 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nautible-app-ms-delivery
   namespace: nautible-app-ms
 spec:
+  replicas: 1
   template:
     spec:
       containers:
       - name: nautible-app-ms-delivery
-        image: public.ecr.aws/nautible/nautible-app-ms-delivery:20932409fdded94694fbde7a7a0edb71314d0fa5
+        image: nautibledevacr.azurecr.io/nautible-app-ms-delivery:latest
         env:
         - name: QUARKUS_PROFILE
-          value: aws-dev
-        - name: QUARKUS_DYNAMODB_AWS_REGION
-          value: ap-northeast-1
+          value: azure-local-dev
+        # - name: JAVA_VERSION
+        #   value: "11"
