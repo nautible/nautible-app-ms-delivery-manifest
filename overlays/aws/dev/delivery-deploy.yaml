@@ -15,3 +15,5 @@ spec:
           value: aws-dev
         - name: QUARKUS_DYNAMODB_AWS_REGION
           value: ap-northeast-1
+      serviceAccount: nautible-app-ms-sa
+      serviceAccountName: nautible-app-ms-sa
